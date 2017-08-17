@@ -1,0 +1,5 @@
+<%= form_for([@cocktail, @dose]) do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient_id %>
+<% end %>
+
