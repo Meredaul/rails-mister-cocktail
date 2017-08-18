@@ -15,7 +15,7 @@
         </div>
 
         <div>
-          <%= cl_image_tag @cocktail.photo, width: 250, height: 300, crop: :fit %>
+          <%= cl_image_tag @cocktail.photo.url(:cocktail_display) %>
         </div>
       </div>
 
