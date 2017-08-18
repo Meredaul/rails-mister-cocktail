@@ -5,4 +5,6 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: { message: "must be given please" }, uniqueness: { case_sensitive: false }
 
+  mount_uploader :photo, PhotoUploader
+
 end

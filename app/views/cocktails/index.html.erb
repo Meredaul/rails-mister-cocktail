@@ -10,13 +10,17 @@
 
     <% @cocktails.each do |cocktail| %>
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
+      <%=  link_to "here", cocktail_path(cocktail) %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card flex-cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('<%= cl_image_path cocktail.photo, height: 200, width: 250, crop: :fit %>');" >
 
-          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            <div>
+              <h4 style="font-size: 60px;"><%= cocktail.name %></h4>
+            </div>
 
+          </div>
         </div>
-      </div>
+
 
     <% end %>
 
