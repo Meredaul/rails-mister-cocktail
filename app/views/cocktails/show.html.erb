@@ -23,8 +23,8 @@
 
       <%= simple_form_for([@cocktail, @dose]) do |f| %>
         <%= f.input :description %>
-        <%= f.association :ingredient_id ''', collection: @ingredients''' %> <!-- association -->
-        <%= f.submit class: "btn btn-primary" %>
+        <%= f.association :ingredient , collection: @ingredients %>  <!-- association -->
+        <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
 
       <%= link_to 'Back', cocktails_path %>
@@ -39,23 +39,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%= form_for([@cocktail, @dose]) do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient_id %>
-<% end %>
 
