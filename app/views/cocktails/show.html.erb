@@ -1,15 +1,22 @@
 <div class="container">
 
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin-bottom:25px">
 
       <h1 class="text-center"><%= @cocktail.name %></h1>
 
-      <div class="flex display-cocktail">
-        <div>
-          <ul class="list-unstyled">
+      <div class="flex-display-cocktail">
+
+        <div class="flex-ingredients-center">
+          <ul class="list-unstyled flex-ingredient-list">
             <% @cocktail.doses.each do |dose| %>
-              <li><%= link_to "<i class='fa fa-close '></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-danger' %>   <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> : <%= dose.description %></li>
+              <li>
+
+                <%= cl_image_tag(dose.photo_ingredient.path, width: 40, height: 40, crop: :fill, class: "avatar-ingredient") if dose.photo_ingredient? %>
+                <%= link_to "<i class='fa fa-close '></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-danger' %>
+                <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> : <%= dose.description %>
+
+              </li>
             <% end %>
           </ul>
         </div>
@@ -19,23 +26,32 @@
         </div>
       </div>
 
-      <br>
+      <hr />
 
-      <p>Please enter an ingredient with its associate dose and description:</p>
+      <div class="formulaire">
+        <p>Please enter an ingredient with its associate dose and description:</p>
 
-      <% if @dose.errors.any? %>
-        <ul>
-          <% @dose.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      <% end %>
+        <% if @dose.errors.any? %>
+          <ul>
+            <% @dose.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
 
-      <%= simple_form_for([@cocktail, @dose]) do |f| %>
-        <%= f.association :ingredient , collection: @ingredients %>  <!-- association -->
-        <%= f.input :description %>
-        <%= f.button :submit, class: "btn btn-primary" %>
-      <% end %>
+        <%= simple_form_for([@cocktail, @dose]) do |f| %>
+
+          <div class="grid">
+            <%= f.association :ingredient , collection: @ingredients %>
+            <%= f.input :photo_ingredient, as: :attachinary, label: false %>
+          </div>
+          <%= f.input :description %>
+          <div class="text-center"><%= f.button :submit, class: "btn btn-primary" %></div>
+
+        <% end %>
+      </div>
+
+      <hr />
 
       <%= link_to 'Back', cocktails_path %>
 

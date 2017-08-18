@@ -1,0 +1,5 @@
+- css grid doesn't work on the show cocktail page, in the form, on the ingredient line.
+
+- trouble to deal with css around the attachinary objects (I'm not talking about the js that should intervene after handing out the image)
+
+- have the title that doesn't go out of the box in index page for the cards
