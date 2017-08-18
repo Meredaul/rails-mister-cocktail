@@ -24,8 +24,8 @@
       <% end %>
 
       <%= simple_form_for([@cocktail, @dose]) do |f| %>
-        <%= f.input :description %>
         <%= f.association :ingredient , collection: @ingredients %>  <!-- association -->
+        <%= f.input :description %>
         <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
 
