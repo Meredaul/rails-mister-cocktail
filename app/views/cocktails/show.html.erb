@@ -3,28 +3,25 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3" style="margin-bottom:25px">
 
-      <h1 class="text-center"><%= @cocktail.name %></h1>
-
-      <div class="flex-display-cocktail">
-
-        <div class="flex-ingredients-center">
-          <ul class="list-unstyled flex-ingredient-list">
-            <% @cocktail.doses.each do |dose| %>
-              <li>
-
-                <%= cl_image_tag(dose.photo_ingredient.path, width: 40, height: 40, crop: :fill, class: "avatar-ingredient") if dose.photo_ingredient? %>
-                <%= link_to "<i class='fa fa-close '></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-danger' %>
-                <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> : <%= dose.description %>
-
-              </li>
-            <% end %>
-          </ul>
-        </div>
-
-        <div>
-          <%= cl_image_tag @cocktail.photo.url(:cocktail_display) %>
-        </div>
+      <div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cocktail.photo.url(:cocktail_display) %>')">
+        <h1><%= @cocktail.name %></h1>
       </div>
+
+      <div class="flex-ingredients-center">
+        <ul class="list-unstyled boxing-list-ingredients">
+          <% @cocktail.doses.each do |dose| %>
+            <li>
+
+              <%= cl_image_tag(dose.photo_ingredient.path, width: 40, height: 40, crop: :fill, class: "avatar-ingredient") if dose.photo_ingredient? %>
+              <%= link_to "<i class='fa fa-close '></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-danger' %>
+              <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> : <%= dose.description %>
+
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
 
       <hr />
 
@@ -49,6 +46,7 @@
           <div class="text-center"><%= f.button :submit, class: "btn btn-primary" %></div>
 
         <% end %>
+
       </div>
 
       <hr />
@@ -56,6 +54,11 @@
       <%= link_to 'Back', cocktails_path %>
 
     </div>
+  </div>
+
+
+  <div id="div-calculation">
+    this is the rectangular with given dimensions
   </div>
 
 </div>

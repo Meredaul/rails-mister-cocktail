@@ -1,27 +1,39 @@
-.flex-display-cocktail {
-  display: flex;
-  justify-content: space-between;
-  // align-align: center;
-  margin: 50px 10px;
+.header {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  & h1 {
+    color: white;
+    opacity: 0.9;
+    font-size: 60px;
+  }
 }
 
 .flex-ingredients-center {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  margin-top: 35px;
+  font-size: 40px;
 }
 
-.flex-ingredient-list {
-  display:flex;
-  flex-direction: column;
-
-}
+// .flex-ingredient-list {
+//   display:flex;
+//   flex-direction: column;
+// }
 
 .avatar-ingredient {
   border-radius: 50%;
 }
 
-.formulaire {
+.boxing-list-ingredients {
+  border: solid;
+  padding: 15px 25px;
+}
+
+.formulaire{
   padding-left: 22px;
   padding-right: 22px;
 }
@@ -58,3 +70,8 @@
   margin-bottom: 30px;
 }
 
+#div-calculation {
+  border: solid;
+  heignt: 300px;
+  width: 500px;
+}
