@@ -66,8 +66,10 @@
 
       <hr />
 
-      <%= link_to 'Back', cocktails_path %>
-
+      <div class="footer">
+        <%= link_to 'Back', cocktails_path %>
+        <%= link_to 'DESTROY', cocktail_path(@cocktail), method: :delete  %>
+      </div>
     </div>
   </div>
 
