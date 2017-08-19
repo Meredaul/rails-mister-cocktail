@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="background_body ">
+  <body class="background_body" style="background-image:  url(' <%= cl_image_path("yqpjk47c78g7jxn1eitb.jpg") %> ');" >
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= cloudinary_js_config %>
