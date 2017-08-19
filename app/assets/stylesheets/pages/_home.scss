@@ -3,6 +3,7 @@ h1 {
   color: #303732;
   opacity: 0.9;
   font-weight: lighter;
+  margin-bottom: 30px;
 }
 
 .banner-xs-cocktails {
@@ -16,8 +17,14 @@ h1 {
 
 }
 
+#cocktail-creation-home {
+  margin-bottom: 30px;
+}
 
 @media(min-width: 768px) {
+  #cocktail-creation-home {
+    margin-bottom: 20px;
+  }
   .flex-cocktail-card {
     margin: 8px;
     overflow: hidden;
