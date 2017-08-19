@@ -1,12 +1,14 @@
+<div class="mobile-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cocktail.photo.url(:cocktail_display) %>')">
+  <h1><%= @cocktail.name %></h1>
+</div>
+
 <div class="container">
 
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2" style="margin-bottom:25px">
 
-      <div class="mobile-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @cocktail.photo.url(:cocktail_display) %>')">
-        <h1><%= @cocktail.name %></h1>
-      </div>
+
 
       <div class="other-header text-center">
         <h1><%= @cocktail.name %></h1>
