@@ -1,4 +1,4 @@
-.header {
+.mobile-header {
   height: 40vh;
   background-size: cover;
   background-position: center;
@@ -12,11 +12,12 @@
   }
 }
 
-.flex-ingredients-center {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  font-size: 40px;
+.other-header {
+  display: none;
+}
+
+.side-image-sm {
+    display: none;
 }
 
 // .flex-ingredient-list {
@@ -29,10 +30,11 @@
 }
 
 .boxing-list-ingredients {
-  margin-top: 15px;
+  margin-top: 45px;
   border: solid;
   padding: 20px 25px;
   height: 50vh;
+  font-size: 40px;
 }
 
 .flex-arrow-down {
@@ -76,3 +78,54 @@
 .form-group.string.required.dose_description {
   margin-bottom: 30px;
 }
+
+
+@media(min-width: 768px) {
+
+  .mobile-header {
+  display: none;
+  }
+  .other-header {
+    display: block;
+  }
+  .flex-display-cocktail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 280px;
+    margin: 15px;
+  }
+  .boxing-list-ingredients {
+  margin-top: 15px;
+  border: none;
+  padding: 50px 10px 20px 0px;
+  height: 50vh;
+  font-size: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 250px;
+  overflow: scroll;
+  }
+
+  .side-image-sm {
+    display: block;
+    width: 55%;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+  }
+  .formulaire {
+    margin: 0px 60px;
+    padding: 15px 25px;
+    font-size: 13px;
+    border: dotted;
+    height: 315px;
+  }
+  hr {
+    margin: 8px 0px;
+  }
+}
+

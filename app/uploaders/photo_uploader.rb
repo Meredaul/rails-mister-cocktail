@@ -13,4 +13,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   version :cocktail_display do
     cloudinary_transformation width: 768, height: 350, crop: :fill, gravity: :center #, effect: :improve
   end
+
+  version :cocktail_side_display do |variable|
+    cloudinary_transformation width: 384, height: 350, crop: :fill, gravity: :center #, effect: :improve
+  end
 end
