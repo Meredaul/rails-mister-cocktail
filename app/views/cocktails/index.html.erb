@@ -14,7 +14,7 @@
       <%=  link_to cocktail_path(cocktail), class: 'show-card-link' do %>
           <div class="card flex-cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('<%= cocktail.photo? ? cl_image_path(cocktail.photo) : "https://unsplash.it/200/300" ; %>');" >
 
-            <div>
+            <div class="cocktail-title">
               <h4 class="text-center"><%= cocktail.name %></h4>
             </div>
 
