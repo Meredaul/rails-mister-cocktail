@@ -1,3 +1,9 @@
+h1 {
+  letter-spacing: 8px;
+  color: #303732;
+  opacity: 0.9;
+  font-weight: lighter;
+}
 
 .banner-xs-cocktails {
   padding: 0px;
@@ -8,7 +14,7 @@
 .cocktail-title h4 {
     font-size: 8vw;
 
-  }
+}
 
 
 @media(min-width: 768px) {
@@ -19,4 +25,8 @@
   .cocktail-title h4 {
     font-size: 32px;
   }
+  .flex-cocktail-card {
+
+  }
 }
+
