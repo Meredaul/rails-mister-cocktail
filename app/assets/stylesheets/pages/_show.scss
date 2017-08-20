@@ -117,13 +117,14 @@ hr {
       letter-spacing: 6px;
       color: #303732;
       opacity: 0.75;
+      margin: 5vh 0px 2vh 0px;
     }
   }
   .flex-display-cocktail {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 320px;
+    height: 79vh;
     margin: 15px;
   }
   .boxing-list-ingredients {
@@ -144,8 +145,8 @@ hr {
 
   .side-image-sm {
     display: block;
-    width: 55%;
-    height: 280px;
+    width: 60%;
+    height: 380px;
     background-size: cover;
     background-position: center;
     border-radius: 3px;
@@ -162,6 +163,10 @@ hr {
   }
   hr {
     margin: 8px 0px;
+  }
+
+  .flex-arrow-down {
+    height: 5vh;
   }
 }
 
