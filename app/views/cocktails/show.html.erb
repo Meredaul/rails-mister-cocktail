@@ -22,7 +22,7 @@
 
               <%= cl_image_tag(dose.photo_ingredient.path, width: 40, height: 40, crop: :fill, class: "avatar-ingredient") if dose.photo_ingredient? %>
               <%= link_to "<i class='fa fa-close '></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'text-danger' %>
-              <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient) %> : <%= dose.description.strip %>
+              <%= link_to dose.ingredient.name, ingredient_path(dose.ingredient), class: "ingredient-name-list" %> : <%= dose.description.strip %>
 
             </li>
           <% end %>

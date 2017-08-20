@@ -29,6 +29,11 @@
   border-radius: 50%;
 }
 
+.ingredient-name-list {
+  color: #53C0A3;
+  opacity: 1;
+}
+
 .boxing-list-ingredients {
   margin-top: 45px;
   border: solid;
@@ -124,9 +129,10 @@ hr {
   .boxing-list-ingredients {
   margin-top: 15px;
   border: none;
-  padding: 6px 10px 15px 0px;
+  padding: 6px 10px 15px 3px;
   height: 50vh;
   font-size: 15px;
+  box-shadow: none;
 
   display: flex;
   flex-direction: column;
