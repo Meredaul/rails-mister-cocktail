@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: 'cocktails#index'
+  root to: 'pages#home'
 
   resources :users do
     resources :cocktails, only: [:index, :create]

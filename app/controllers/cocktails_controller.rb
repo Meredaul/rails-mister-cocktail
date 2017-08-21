@@ -2,7 +2,7 @@ class CocktailsController < ApplicationController
   before_action :find_cocktail, only: [:show, :destroy]
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = current_user.cocktails
   end
 
   def show
