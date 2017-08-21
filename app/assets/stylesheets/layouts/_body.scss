@@ -1,5 +1,6 @@
 .background_body {
   background-image: linear-gradient(rgba(0,0,0,0.1)), url(' <%= cl_image_path("yqpjk47c78g7jxn1eitb.jpg") %> ');
+  background-size: cover;
 }
 //url("background_body.jpeg")
 .body_font {
