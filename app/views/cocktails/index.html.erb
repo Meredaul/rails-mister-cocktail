@@ -26,7 +26,11 @@
     <% end %>
 
   </div>
-  <%= link_to 'sign out', destroy_user_session_path %>
+
+  <div class='log_out'>
+    <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+  </div>
+
 </div>
 
 

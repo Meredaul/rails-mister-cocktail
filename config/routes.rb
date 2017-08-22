@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :users do
-    resources :cocktails, only: [:index, :create]
-  end
+  # resources :users do
+    # resources :cocktails, only: [:index, :create]
+  # end
 
-  resources :cocktails, only: [:show, :new, :destroy] do
+  resources :cocktails, only: [:show, :new, :destroy, :index, :create] do
     resources :doses, only: [:create]
   end
 
@@ -18,3 +18,4 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
 end
+

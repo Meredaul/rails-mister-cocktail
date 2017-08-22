@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def home
     if user_signed_in?
-      redirect_to user_cocktails_path(current_user)
+      redirect_to cocktails_path(current_user)
     end
   end
 
