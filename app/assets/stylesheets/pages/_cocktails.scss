@@ -1,9 +1,27 @@
+.banner {
+  margin-top: 1vw;
+  margin-left: 0vw;
+  margin-right: 0vw;
+  display: flex;
+  align-items: center;
+}
+
+.avatar_profil_picture {
+  margin-left: 3vw;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+  box-shadow: -1px 1px 1px #4D4C4E;
+}
 h1 {
+  // flex: auto;
+  width: 80%;
   letter-spacing: 8px;
   color: #303732;
   opacity: 0.9;
   font-weight: lighter;
   margin-bottom: 30px;
+
 }
 
 .cocktail-creation-button {

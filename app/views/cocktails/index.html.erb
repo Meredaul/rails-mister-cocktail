@@ -1,5 +1,10 @@
-<h1 class="text-center">Your cocktail list</h1>
-
+<div class='banner'>
+  <% avatar_url = current_user.google_picture_url || current_user.facebook_picture_url %>
+  <% if avatar_url %>
+    <%= image_tag avatar_url, class: 'avatar_profil_picture' %>
+  <% end %>
+  <h1 class="text-center">Your cocktail list</h1>
+</div>
 <div class="text-center padded" id="cocktail-creation-home">
   <%= link_to "Create a cocktail", new_cocktail_path, class: 'btn btn-success cocktail-creation-button' %>
 </div>

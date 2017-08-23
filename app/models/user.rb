@@ -30,6 +30,7 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
+    byebug
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
     user_params[:google_picture_url] = auth.info.image
