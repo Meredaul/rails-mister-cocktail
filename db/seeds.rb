@@ -8,7 +8,7 @@
 # Ingredient.create(name: "lemon")
 # Ingredient.create(name: "ice")
 # Ingredient.create(name: "mint leaves")
-Ingredient.destroy_all
+# Ingredient.destroy_all
 
 require 'open-uri'
 
