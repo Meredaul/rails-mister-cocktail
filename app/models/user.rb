@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   devise :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
+  after_create :send_welcome_email
+
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
@@ -46,4 +48,11 @@ class User < ApplicationRecord
     end
     user
   end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
+  end
+
 end
